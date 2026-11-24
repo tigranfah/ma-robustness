@@ -1,0 +1,27 @@
+defaults:
+  seed: 0
+  model_name: vit_tiny_patch16_224
+  device: cuda
+  lr: 3e-4
+  num_steps: 3000000
+
+configs:
+  # - weight_decay: 0.01
+  #   dataset: imagenette
+  #   use_ln: True
+  #   disable_mlp_ln: True
+
+  # - weight_decay: 0.01
+  #   dataset: imagenette
+
+  - weight_decay: 0.1
+    dataset: cifar10
+    resume_checkpoint: ./checkpoints/vit-tiny-cifar10-wd-0.1/checkpoint_1000000.pth
+
+  - weight_decay: 0.01
+    dataset: cifar10
+    resume_checkpoint: ./checkpoints/vit-tiny-cifar10-wd-0.01/checkpoint_1000000.pth
+
+  - weight_decay: 0.0
+    dataset: cifar10
+    resume_checkpoint: ./checkpoints/vit-tiny-cifar10-wd-0/checkpoint_1000000.pth

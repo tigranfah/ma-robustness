@@ -1,0 +1,13 @@
+defaults:
+  seed: 1
+  bias: true
+  block_type: pre
+  init_scale: 1.0
+  weight_decay: 0.01
+  lambda_jac: 0.0
+  hidden_dim: 200
+  steps: 10000
+
+configs:
+  - depth: 8
+    residual_stream: True

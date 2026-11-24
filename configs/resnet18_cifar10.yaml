@@ -1,0 +1,5 @@
+defaults:
+  seed: 0
+
+configs:
+  - weight_decay: 0.01
